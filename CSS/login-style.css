@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.8) 100%);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; 
+    height: calc(100vh - 80px); 
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    border:none;
+    background: none;
+}
+
+img{
+    width: 100%;
+}
+
+.selection-content{
+    margin: 0px auto;
+    padding: 0px 20px;
+    max-width: 100%;
+}
+
+/* Navbar */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+    padding: 20px 5%;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight:50;
+} 
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .nav-menu .nav-link{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link.active {
+    border-bottom: 2px solid white;
+}
+
+.navbar .nav-menu .nav-link::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    border-bottom: 2px solid white;
+    transition: 0.4s linear;
+}
+
+.navbar .nav-menu .nav-link:hover::before{
+    width: 90%;
+}
+
+.navbar .nav-menu .login-link{
+    padding: 10px 18px;
+    color: white;
+    background: rgb(72, 72, 72);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.4s ease;
+}
+
+.navbar .nav-menu .login-link:hover {
+    background: transparent; 
+    border: 2px solid rgb(127.5, 127.5, 127.5);
+} 
+
+/* login page */
+/* Wrapper Section */
+.wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form Styles */
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #777777;
+}
+
+/* button.btn {
+    pointer-events: auto;
+    cursor: pointer;
+} */
+
+/* Register Link */
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.register-link a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #007bff;
+}
